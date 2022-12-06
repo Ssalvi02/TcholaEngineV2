@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Arquivos de Origem">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Arquivos de Recurso">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\glad.c">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stb.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shader.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Texture.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResMan.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SpriteRenderer.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObj.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLvl.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BallObj.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ParticleGen.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PostProc.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TextRenderer.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Shaders\sprite.frag" />
+    <None Include="src\Shaders\sprite.vs" />
+    <None Include="assets\fragment_core2.glsl" />
+    <None Include="src\Levels\eight.lvl" />
+    <None Include="src\Levels\five.lvl" />
+    <None Include="src\Levels\four.lvl" />
+    <None Include="src\Levels\nine.lvl" />
+    <None Include="src\Levels\one.lvl" />
+    <None Include="src\Levels\seven.lvl" />
+    <None Include="src\Levels\six.lvl" />
+    <None Include="src\Levels\ten.lvl" />
+    <None Include="src\Levels\three.lvl" />
+    <None Include="src\Levels\two.lvl" />
+    <None Include="src\Shaders\particle.vs" />
+    <None Include="src\Shaders\particle.frag" />
+    <None Include="src\Shaders\postprocess.vs" />
+    <None Include="src\Shaders\postprocess.frag" />
+    <None Include="src\Shaders\text.frag" />
+    <None Include="src\Shaders\text.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Game.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shader.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Texture.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ResMan.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SpriteRenderer.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObj.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLvl.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BallObj.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ParticleGen.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PostProc.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PowerUp.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TextRenderer.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\Textures\awesomeface.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\background.jpg">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\block.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\block_solid.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\paddle.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\PwrUps\powerup_chaos.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\PwrUps\powerup_confuse.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\PwrUps\powerup_increase.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\PwrUps\powerup_passthrough.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\PwrUps\powerup_speed.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\PwrUps\powerup_sticky.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\particle.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

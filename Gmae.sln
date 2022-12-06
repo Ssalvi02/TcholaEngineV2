@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gmae", "Gmae\Gmae.vcxproj", "{F4660DC6-F606-4E5E-BA62-D0F151A7698F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4660DC6-F606-4E5E-BA62-D0F151A7698F}.Debug|x64.ActiveCfg = Debug|x64
+		{F4660DC6-F606-4E5E-BA62-D0F151A7698F}.Debug|x64.Build.0 = Debug|x64
+		{F4660DC6-F606-4E5E-BA62-D0F151A7698F}.Debug|x86.ActiveCfg = Debug|Win32
+		{F4660DC6-F606-4E5E-BA62-D0F151A7698F}.Debug|x86.Build.0 = Debug|Win32
+		{F4660DC6-F606-4E5E-BA62-D0F151A7698F}.Release|x64.ActiveCfg = Release|x64
+		{F4660DC6-F606-4E5E-BA62-D0F151A7698F}.Release|x64.Build.0 = Release|x64
+		{F4660DC6-F606-4E5E-BA62-D0F151A7698F}.Release|x86.ActiveCfg = Release|Win32
+		{F4660DC6-F606-4E5E-BA62-D0F151A7698F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A43C4C85-3B00-4EF1-9E22-F07BA7884344}
+	EndGlobalSection
+EndGlobal
