@@ -185,6 +185,7 @@
   <ItemGroup>
     <Image Include="src\Textures\awesomeface.png" />
     <Image Include="src\Textures\background.jpg" />
+    <Image Include="src\Textures\ball.png" />
     <Image Include="src\Textures\block.png" />
     <Image Include="src\Textures\block_solid.png" />
     <Image Include="src\Textures\paddle.png" />

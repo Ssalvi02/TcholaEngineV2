@@ -1,5 +1,6 @@
 #include "GameLvl.h"
 
+#include <iostream>
 #include <fstream>
 #include <sstream>
 
@@ -25,7 +26,9 @@ void GameLevel::Load(const char* file, unsigned int levelWidth, unsigned int lev
             tileData.push_back(row);
         }
         if (tileData.size() > 0)
+        {
             this->init(tileData, levelWidth, levelHeight);
+        }
     }
 }
 
@@ -38,14 +41,14 @@ void GameLevel::Draw(SpriteRenderer& renderer)
 
 bool GameLevel::IsCompleted()
 {
-    for (GameObject& tile : this->Bricks) 
+    for (GameObject& tile : this->Bricks)
     {
-        if (!tile.isSolid && !tile.destroyed) 
+        if (!tile.isSolid && !tile.destroyed)
         {
             return false;
         }
-        return true;
     }
+    return true;
 }
 
 void GameLevel::init(std::vector<std::vector<unsigned int>> tileData, unsigned int levelWidth, unsigned int levelHeight)
@@ -72,13 +75,41 @@ void GameLevel::init(std::vector<std::vector<unsigned int>> tileData, unsigned i
             {
                 glm::vec3 color = glm::vec3(1.0f); // Branco
                 if (tileData[y][x] == 2)
-                    color = glm::vec3(0.2f, 0.6f, 1.0f); // Azulzinho brabo
+                {
+                    color = glm::vec3(0.302f, 0.651f, 1.0f); // Azulzinho brabo
+                }
                 else if (tileData[y][x] == 3)
-                    color = glm::vec3(0.0f, 0.7f, 0.0f); // Verdinho brabo
+                {
+                    color = glm::vec3(0.561f, 0.871f, 0.365f); // Verdinho brabo
+                }
                 else if (tileData[y][x] == 4)
-                    color = glm::vec3(0.8f, 0.8f, 0.4f); // Amarelo feio
-                else if (tileData[y][x] == 5)
-                    color = glm::vec3(1.0f, 0.5f, 0.0f);// Laranja meio vermeio
+                {
+                    color = glm::vec3(1.0f, 0.894f, 0.471f); // Amarelo brabo
+                }
+                else if (tileData[y][x] == 5) 
+                {
+                    color = glm::vec3(0.729f, 0.38f, 0.337f);// Laranja meio vermeio brabo tamem
+                }
+                else if (tileData[y][x] == 6)
+                {
+                    color = glm::vec3(0.949f, 0.651f, 0.369f);// Laranja brabo 
+                }
+                else if (tileData[y][x] == 7)
+                {
+                    color = glm::vec3(1.0f, 0.42f, 0.592f);// Rosinha brabo 
+                }
+                else if (tileData[y][x] == 8)
+                {
+                    color = glm::vec3(0.812f, 1.0f, 0.439f);// Lima brabo 
+                }
+                else if (tileData[y][x] == 9)
+                {
+                    color = glm::vec3(1.0f, 0.71f, 0.71f);// Rosinha claro brabo 
+                }
+                else if (tileData[y][x] == 10)
+                {
+                    color = glm::vec3(0.729f, 0.38f, 0.337f);// Marrom brabo 
+                }
 
                 glm::vec2 pos(unit_width * x, unit_height * y);
                 glm::vec2 size(unit_width, unit_height);

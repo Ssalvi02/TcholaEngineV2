@@ -21,9 +21,6 @@
     <ClCompile Include="src\glad.c">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="src\stb.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
     <ClCompile Include="src\Game.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
@@ -55,6 +52,9 @@
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="src\TextRenderer.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stb.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
@@ -152,6 +152,9 @@
       <Filter>Arquivos de Recurso</Filter>
     </Image>
     <Image Include="src\Textures\particle.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="src\Textures\ball.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
   </ItemGroup>

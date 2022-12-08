@@ -34,7 +34,7 @@ glm::vec2 BallObject::Move(float dt, unsigned int window_width)
     return this->position;
 }
 
-// resets the ball to initial Stuck Position (if ball is outside window bounds)
+// Reseta a bola para a posição que ela tá presa
 void BallObject::Reset(glm::vec2 position, glm::vec2 velocity)
 {
     this->position = position;

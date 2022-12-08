@@ -18,9 +18,9 @@ void ParticleGenerator::Update(float dt, GameObject& object, unsigned int newPar
     for (unsigned int i = 0; i < this->amount; ++i)
     {
         Particle& p = this->particles[i];
-        p.Life -= dt; // reduce life
+        p.Life -= dt; // Reduz vida
         if (p.Life > 0.0f)
-        {	// particle is alive, thus update
+        {	// Se a particula estiver viva, update
             p.Position -= p.Velocity * dt;
             p.Color.a -= dt * 2.5f;
         }

@@ -47,6 +47,9 @@ Game::~Game()
     delete Player;
     delete Ball;
     delete Particle;
+    delete Effects;
+    delete SoundEngine;
+    delete Text;
 }
 
 void Game::Init()
@@ -229,11 +232,10 @@ void Game::ProcessInput(float dt)
             }
             else 
             {
-                this->Level = 3;
+                this->Level = 9;
             }
             this->keysProcessed[GLFW_KEY_S] = true;
         }
-
     }
     //Teclas da vitória
     if (this->state == GAME_WIN)
@@ -262,7 +264,8 @@ void Game::Render()
         // Desenha o player
         Player->Draw(*Renderer);
         //Desenha as particulas
-        if (!Ball->stuck) {
+        if (!Ball->stuck) 
+        {
             Particle->Draw();
         }
         //Desenha a bola
@@ -308,19 +311,19 @@ bool ShouldSpawn(unsigned int chance)
 
 void Game::SpawnPowerUps(GameObject& block)
 {
-    if (ShouldSpawn(75)) // 1 em 75 
+    if (ShouldSpawn(30)) // 1 em 30
         this->PowerUps.push_back(
             PowerUp("speed", glm::vec3(0.5f, 0.5f, 1.0f), 0.0f, block.position, ResourceManager::GetTexture("speed")
             ));
-    if (ShouldSpawn(75))
+    if (ShouldSpawn(30))
         this->PowerUps.push_back(
             PowerUp("sticky", glm::vec3(1.0f, 0.5f, 1.0f), 20.0f, block.position, ResourceManager::GetTexture("sticky")
             ));
-    if (ShouldSpawn(75))
+    if (ShouldSpawn(30))
         this->PowerUps.push_back(
             PowerUp("pass-through", glm::vec3(0.5f, 1.0f, 0.5f), 10.0f, block.position, ResourceManager::GetTexture("pass")
             ));
-    if (ShouldSpawn(75))
+    if (ShouldSpawn(30))
         this->PowerUps.push_back(
             PowerUp("pad-size-increase", glm::vec3(1.0f, 0.6f, 0.4), 0.0f, block.position, ResourceManager::GetTexture("size")
             ));
@@ -398,7 +401,7 @@ void ActivatePowerUp(PowerUp& powerUp)
     else if (powerUp.type == "confuse")
     {
         if (!Effects->Chaos)
-            Effects->Confuse = true; // only activate if chaos wasn't already active
+            Effects->Confuse = true; 
     }
     else if (powerUp.type == "chaos")
     {
@@ -431,9 +434,8 @@ void Game::DoCollisions()
         if (!box.destroyed)
         {
             Collision collision = CheckCollision(*Ball, box);
-            if (std::get<0>(collision)) // if collision is true
+            if (std::get<0>(collision)) // Se a colisão for true
             {
-                // destroy block if not solid
                 if (!box.isSolid)
                 {
                     box.destroyed = true;
@@ -445,7 +447,7 @@ void Game::DoCollisions()
                     Effects->Shake = true;
                     SoundEngine->play2D("src/Audio/solid.wav", false);
                 }
-                // collision resolution
+                // Resolução de colisão
                 Direction dir = std::get<1>(collision);
                 glm::vec2 diff_vector = std::get<2>(collision);
                 if (!(Ball->pass && !box.isSolid))
@@ -516,8 +518,12 @@ bool IsOtherPowerUpActive(std::vector<PowerUp>& powerUps, std::string type)
     for (const PowerUp& powerUp : powerUps)
     {
         if (powerUp.activated)
+        {
             if (powerUp.type == type)
+            {
                 return true;
+            }
+        }
     }
     return false;
 }
@@ -609,9 +615,13 @@ Collision CheckCollision(BallObject& one, GameObject& two)
     difference = closest - center;
 
     if (glm::length(difference) < one.radius)
+    {
         return std::make_tuple(true, VectorDirection(difference), difference);
+    }
     else
+    {
         return std::make_tuple(false, UP, glm::vec2(0.0f, 0.0f));
+    }
 }
 
 //Calcula a direção do vetor de direção (N,S,L,O)
